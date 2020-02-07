@@ -1,0 +1,54 @@
+{
+  "_meta": {
+    "template_version": 0
+  },
+  "fixtures": [
+    {
+      "name": "stripe-sample-test-card",
+      "path": "/v1/payment_methods",
+      "method": "post",
+      "params": {
+        "type": "card",
+        "card": { "token": "tok_visa" }
+      }
+    },
+    {
+      "name": "stripe-sample-customer-1",
+      "path": "/v1/customers",
+      "method": "post",
+      "params": {
+        "id": "stripe-sample-customer-1",
+        "name": "Mr. Customer",
+        "email": "mr_customer@example.com",
+        "payment_method": "${stripe-sample-test-card:id}",
+        "metadata": {
+          "some-interesting": "piece-of-information"
+        }
+      }
+    },
+    {
+        "name": "stripe-sample-test-card-2",
+        "path": "/v1/payment_methods",
+        "method": "post",
+        "params": {
+          "type": "card",
+          "card": { "token": "tok_amex" }
+        }
+      },
+      {
+        "name": "stripe-sample-customer-2",
+        "path": "/v1/customers",
+        "method": "post",
+        "params": {
+          "id": "stripe-sample-customer-2",
+          "name": "Ms. Customer",
+          "email": "ms_customer@example.com",
+          "payment_method": "${stripe-sample-test-card-2:id}",
+          "metadata": {
+            "some-interesting": "piece-of-information"
+          }
+        }
+      }
+  
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "_meta": {
+    "template_version": 0
+  },
+  "fixtures": [
+    {
+      "name": "stripe-sample-test-plan",
+      "path": "/v1/plans",
+      "method": "post",
+      "params": {
+        "product": {
+          "id": "stripe-sample-test-product",
+          "name": "stripe-sample-test-product"
+        },
+        "id": "stripe-sample-test-plan",
+        "amount": 1000,
+        "currency": "usd",
+        "interval": "day"
+      }
+    },
+    {
+      "name": "stripe-sample-test-card",
+      "path": "/v1/payment_methods",
+      "method": "post",
+      "params": {
+        "type": "card",
+        "card": { "token": "tok_visa" }
+      }
+    },
+    {
+      "name": "stripe-sample-test-customer",
+      "path": "/v1/customers",
+      "method": "post",
+      "params": {
+        "name": "My Cool Customer",
+        "email": "my_cool_customer@example.com",
+        "metadata": {
+          "some-interesting": "piece-of-information"
+        },
+        "payment_method": "${stripe-sample-test-card:id}"
+      }
+    },
+    {
+      "name": "stripe-sample-subscription",
+      "path": "/v1/subscriptions",
+      "method": "post",
+      "params": {
+        "customer": "${stripe-sample-test-customer:id}",
+        "items": [{ "plan": "${stripe-sample-test-plan:id}" }],
+        "default_payment_method": "${stripe-sample-test-card:id}"
+      }
+    }
+  ]
+}

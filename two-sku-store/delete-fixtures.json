@@ -4,13 +4,13 @@
   },
   "fixtures": [
     {
-      "name": "stripe-sample-test-tshirt-product",
-      "path": "/v1/products/stripe-sample-test-tshirt-product",
+      "name": "stripe-sample-basic-tshirt",
+      "path": "/v1/skus/stripe-sample-basic-tshirt",
       "method": "delete"
     },
     {
-      "name": "stripe-sample-test-tshirt-product",
-      "path": "/v1/products/stripe-sample-test-tshirt-product",
+      "name": "stripe-sample-fancy-tshirt",
+      "path": "/v1/skus/stripe-sample-fancy-tshirt",
       "method": "delete"
     },
     {

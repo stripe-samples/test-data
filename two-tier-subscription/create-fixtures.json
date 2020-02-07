@@ -1,0 +1,38 @@
+{
+    "_meta": {
+      "template_version": 0
+    },
+    "fixtures": [
+      {
+        "name": "stripe-sample-basic-test-plan",
+        "path": "/v1/plans",
+        "method": "post",
+        "params": {
+          "product": {
+            "id": "stripe-sample-basic-test-product",
+            "name": "stripe-sample-basic-test-product"
+          },
+          "id": "stripe-sample-basic-test-plan",
+          "amount": 1000,
+          "currency": "usd",
+          "interval": "month"
+        }
+      },
+      {
+        "name": "stripe-sample-pro-test-plan",
+        "path": "/v1/plans",
+        "method": "post",
+        "params": {
+          "product": {
+            "id": "stripe-sample-pro-test-product",
+            "name": "stripe-sample-pro-test-product"
+          },
+          "id": "stripe-sample-pro-test-plan",
+          "amount": 5000,
+          "currency": "usd",
+          "interval": "month"
+        }
+      }
+    ]
+  }
+  

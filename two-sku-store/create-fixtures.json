@@ -1,0 +1,41 @@
+{
+  "_meta": {
+    "template_version": 0
+  },
+  "fixtures": [
+    {
+      "name": "stripe-sample-test-tshirt-product",
+      "path": "/v1/products",
+      "method": "post",
+      "params": {
+        "id": "stripe-sample-test-tshirt-product",
+        "name": "stripe-sample-test-tshirt-product",
+        "type": "good"
+      }
+    },
+    {
+      "name": "stripe-sample-basic-tshirt",
+      "path": "/v1/skus",
+      "method": "post",
+      "params": {
+        "product": "stripe-sample-test-tshirt-product",
+        "id": "stripe-sample-basic-tshirt",
+        "price": 1500,
+        "currency": "usd",
+        "inventory": { "type": "infinite" }
+      }
+    },
+    {
+      "name": "stripe-sample-fancy-tshirt",
+      "path": "/v1/skus",
+      "method": "post",
+      "params": {
+        "product": "stripe-sample-test-tshirt-product",
+        "id": "stripe-sample-fancy-tshirt",
+        "price": 2000,
+        "currency": "usd",
+        "inventory": { "type": "infinite" }
+      }
+    }
+  ]
+}

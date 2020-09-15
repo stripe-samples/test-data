@@ -53,3 +53,12 @@ Open a PR against this repo and add:
 2. A `create-fixtures.json` file that creates the test data.
 3. A `delete-fixtures.json` that tears down the test data.
 4. [optional] A little about the business you're building and why this test fixture helped you model it 😊 (only if you want some free advertising!)
+
+## Get support
+If you found a bug or want to suggest a new [feature/use case/sample], please [file an issue](../../issues).
+
+If you have questions, comments, or need help with code, we're here to help:
+- on [IRC via freenode](https://webchat.freenode.net/?channel=#stripe)
+- on Twitter at [@StripeDev](https://twitter.com/StripeDev)
+- on Stack Overflow at the [stripe-payments](https://stackoverflow.com/tags/stripe-payments/info) tag
+- by [email](mailto:support+github@stripe.com)
